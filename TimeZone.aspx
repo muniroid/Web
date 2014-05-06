@@ -22,7 +22,6 @@
             
             lit_time.Text = string.Format("<table><tr><td>UTC time:</td><td>{0}</td></tr><tr><td>Time zone info:</td><td>{1}</td></tr><tr><td>Selected time:</td><td>{2}</td></tr><tr><td>Server time:</td><td>{3}</td></tr></table>", timeUtc, SelectedZone, SelectedTime,DateTime.Now);
         }
-
 </script>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
