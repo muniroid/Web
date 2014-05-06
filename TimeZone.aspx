@@ -1,5 +1,5 @@
 <%@ Page Title="Time Zone" Language="C#"%>
-<script runat="server">
+<%
     public void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -20,7 +20,7 @@
             
             lit_time.Text = string.Format("UTC time: {0}<br />Time zone info: {1}<br />Selected time: {2}", timeUtc, SelectedZone, SelectedTime);
         }
-<script runat="server">
+%>
 
 <!DOCTYPE html>
 <html>
