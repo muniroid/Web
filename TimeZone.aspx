@@ -36,8 +36,6 @@
     <asp:Button ID="btn_submit" runat="server" Text="Show time" OnClick="btn_submit_Click" />
     <br />
     <asp:Literal ID="lit_time" runat="server"></asp:Literal>
-    
-    <h1>hello</h1>
     </form>
 </body>
 </html>
