@@ -1,6 +1,27 @@
 <%@ Page Language="C#" %>
 
+<script runat="server">
+    protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                foreach (TimeZoneInfo z in TimeZoneInfo.GetSystemTimeZones())
+                {
+                    ListItem item = new ListItem(z.DisplayName, z.Id);
+                    ddl_time_zone.Items.Add(item);
+                }
+            }
+        }
 
+        protected void btn_submit_Click(object sender, EventArgs e)
+        {
+            DateTime timeUtc = DateTime.UtcNow;
+            TimeZoneInfo SelectedZone = TimeZoneInfo.FindSystemTimeZoneById(ddl_time_zone.SelectedValue);
+            DateTime SelectedTime = TimeZoneInfo.ConvertTimeFromUtc(timeUtc, SelectedZone);
+            
+            lit_time.Text = string.Format("UTC time: {0}<br />Time zone info: {1}<br />Selected time: {2}", timeUtc, SelectedZone, SelectedTime);
+        }
+</script>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
