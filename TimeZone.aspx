@@ -1,6 +1,6 @@
 <%@ Page Title="Time Zone" Language="C#"%>
 <script runat="server">
-    void Page_Load(object sender, EventArgs e)
+    public void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
@@ -12,7 +12,7 @@
             }
         }
 
-        void btn_submit_Click(object sender, EventArgs e)
+        public void btn_submit_Click(object sender, EventArgs e)
         {
             DateTime timeUtc = DateTime.UtcNow;
             TimeZoneInfo SelectedZone = TimeZoneInfo.FindSystemTimeZoneById(ddl_time_zone.SelectedValue);
