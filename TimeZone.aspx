@@ -30,11 +30,9 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <asp:DropDownList ID="ddl_time_zone" runat="server">
-    </asp:DropDownList>
-    <asp:Button ID="btn_submit" runat="server" Text="Show time" OnClick="btn_submit_Click" />
-    <br />
-    <asp:Literal ID="lit_time" runat="server"></asp:Literal>
+        <asp:DropDownList ID="ddl_time_zone" runat="server" />
+        <asp:Button ID="btn_submit" runat="server" Text="Show time" OnClick="btn_submit_Click" />
+        <asp:Literal ID="lit_time" runat="server"/>
     </form>
 </body>
 </html>
