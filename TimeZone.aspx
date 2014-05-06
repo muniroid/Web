@@ -1,7 +1,6 @@
-<%@ Page Language="C#" %>
-
-<%
-    protected void Page_Load(object sender, EventArgs e)
+<%@ Page Title="Time Zone" Language="C#"%>
+<script runat="server">
+    void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
@@ -13,7 +12,7 @@
             }
         }
 
-        protected void btn_submit_Click(object sender, EventArgs e)
+        void btn_submit_Click(object sender, EventArgs e)
         {
             DateTime timeUtc = DateTime.UtcNow;
             TimeZoneInfo SelectedZone = TimeZoneInfo.FindSystemTimeZoneById(ddl_time_zone.SelectedValue);
@@ -21,10 +20,10 @@
             
             lit_time.Text = string.Format("UTC time: {0}<br />Time zone info: {1}<br />Selected time: {2}", timeUtc, SelectedZone, SelectedTime);
         }
-%>
+<script runat="server">
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head runat="server">
     <title></title>
 </head>
