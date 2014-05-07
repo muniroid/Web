@@ -9,9 +9,9 @@
 		echo "<h1>Welcome to my website.</h1> $date";
 		echo "<br />". date_default_timezone_get();
 		date_default_timezone_set("UTC");
-		$date = date("Y/m/d h:i:s A");
+		$date1 = date("Y/m/d h:i:s A");
 		echo "<br />". date_default_timezone_get();
-		echo "<br />". $date;
+		echo "<br />". $date1;
 	?>
 </body>
 </html>
