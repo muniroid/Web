@@ -29,7 +29,7 @@
     <title>Time zone</title>
 </head>
 <body>
-    <a href="/">..Back</a>
+    <a href="/"> .. Back</a>
     <form id="form1" runat="server">
         <asp:DropDownList ID="ddl_time_zone" runat="server" />
         <asp:Button ID="btn_submit" runat="server" Text="Show time" OnClick="btn_submit_Click" />
