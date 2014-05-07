@@ -10,8 +10,7 @@
 		echo " - ". date_default_timezone_get();
 		date_default_timezone_set("UTC");
 		$date1 = date("Y/m/d h:i:s A");
-		echo "<br /><br />". date_default_timezone_get();
-		echo " - ". $date1;
+		echo "<br /><br /> $date1 -". date_default_timezone_get();
 	?>
 </body>
 </html>
