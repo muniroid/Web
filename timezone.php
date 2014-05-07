@@ -4,6 +4,7 @@
 		<title>MUNIROID</title>
 	</head>
 <body>
+	<a href="/"> .. Back</a>
 	<?php 
 		$date = date("Y/m/d h:i:s A");
 		echo "$date - ". date_default_timezone_get();
