@@ -20,7 +20,7 @@
         TimeZoneInfo SelectedZone = TimeZoneInfo.FindSystemTimeZoneById(ddl_time_zone.SelectedValue);
         DateTime SelectedTime = TimeZoneInfo.ConvertTimeFromUtc(timeUtc, SelectedZone);
         
-        lit_time.Text = string.Format("<table><tr><td>UTC time:</td><td>{0:dd-MMM-yyyy hh:mm:ss tt}</td></tr><tr><td>Time zone info:</td><td>{1}</td></tr><tr><td>Selected time:</td><td>{2:dd-MMM-yyyy hh:mm:ss tt}</td></tr><tr><td>Server time:</td><td>{3:dd-MMM-yyyy hh:mm:ss tt}</td></tr></table>", timeUtc, SelectedZone.Id, SelectedTime,DateTime.Now);
+        lit_time.Text = string.Format("<table><tr><td>UTC time:</td><td>{0:dd-MMM-yyyy hh:mm:ss tt}</td></tr><tr><td>Time zone info:</td><td>{1}</td></tr><tr><td>Selected time:</td><td>{2:dd-MMM-yyyy hh:mm:ss tt}</td></tr><tr><td>Server time:</td><td>{3:dd-MMM-yyyy hh:mm:ss tt}</td></tr><tr><td>Local time:</td><td>{4:dd-MMM-yyyy hh:mm:ss tt}</td></tr></table>", timeUtc, SelectedZone.Id, SelectedTime,DateTime.Now,DateTime.Now.ToLocalTime());
     }
 </script>
 
