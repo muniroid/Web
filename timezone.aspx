@@ -12,6 +12,7 @@
                 ddl_time_zone.Items.Add(item);
             }
         }
+        lit_ip.Text =  HttpContext.Current.Request.UserHostAddress;
     }
 
     protected void btn_submit_Click(object sender, EventArgs e)
@@ -34,6 +35,9 @@
         <asp:DropDownList ID="ddl_time_zone" runat="server" />
         <asp:Button ID="btn_submit" runat="server" Text="Show time" OnClick="btn_submit_Click" />
         <asp:Literal ID="lit_time" runat="server" />
+        <br />
+        <br />
+        <asp:Literal ID="lit_ip" runat="server" />
     </form>
 </body>
 </html>
